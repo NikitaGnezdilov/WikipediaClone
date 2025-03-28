@@ -1,0 +1,69 @@
+@use '../../base/vars'
+.article-greeting
+  width: 100%
+  padding: 2rem 1.5rem
+  margin-bottom: 1.5rem
+  background-color: #f8f9fa
+  border: 1px solid #c8ccd1
+  border-radius: 2px
+
+.greeting-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+
+.greeting-text
+  max-width: 60%
+
+  h1
+    font-size: 1.8em
+    font-family: 'Linux Libertine', 'Georgia', serif
+    font-weight: normal
+    line-height: 1.375
+
+.wiki-stats
+  margin-top: 0
+  padding-left: 20px
+  font-size: 0.85em
+  padding-top: 1rem
+  font-size: 1em
+
+  &__text
+    margin-bottom: 0.5rem
+    text-align: right
+    color: #202122
+
+    a
+      font-weight: 700
+      font-weight: bold
+      color: #3366cc
+      font-size: 0.9em
+      text-decoration: none
+
+
+  &__links
+    display: flex
+    gap: 25px
+    justify-content: right
+    margin-right: auto
+    align-items: center
+
+    a
+      font-weight: 700
+      font-weight: bold
+      color: #3366cc
+      font-size: 0.9em
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+.create-article
+  border: 1px solid #3366cc
+  padding: 3px 8px
+  border-radius: 2px
+  background-color: #f8f9fa
+
+  &:hover
+    background-color: #e9ecef

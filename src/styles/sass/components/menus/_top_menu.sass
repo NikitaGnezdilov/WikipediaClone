@@ -1,0 +1,53 @@
+@use '../../base/_vars'
+.horizontal-menu
+  display: flex
+  align-items: center
+
+  &--position
+    position: absolute
+    top: 0
+    right: 0
+    padding: 10px
+    margin-right: 4px
+    background-color: #f8f9fa
+    border-bottom: 1px solid #e1e4e8
+    border-left: 1px solid #e1e4e8
+
+  &__nav-panel
+    ul
+      display: flex
+      list-style: none
+      margin: 0
+      padding: 0
+      align-items: center
+
+  &__item
+    margin-right: 10px
+    display: flex
+    align-items: center 
+    font-size: 0.9em 
+    cursor: pointer
+
+    &--user-not-logged
+      display: flex
+      align-items: center
+      gap: 2px
+      pointer-events: none
+      cursor: default
+      a
+        color: vars.$color-h3-header !important
+
+    &--logo-person
+      font-size: 1.3em 
+      margin-bottom: 5px
+
+    a
+      text-decoration: none
+      font-size: 0.85em
+
+      &:hover
+        text-decoration: underline
+
+      &:visited
+        color: vars.$blue-color-link
+

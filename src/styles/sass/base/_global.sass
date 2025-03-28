@@ -1,0 +1,25 @@
+@use '../base/_vars'
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: Arial, sans-serif
+
+body, html
+  padding: 0
+  margin: 0
+  font-family: sans-serif
+a
+  color: vars.$blue-color-link
+  text-decoration: none
+  cursor: pointer
+
+  &:hover
+    text-decoration: underline
+
+  &:visited
+    color: vars.$visited-link-color
+    text-decoration: none
+
+  &:visited:hover
+    text-decoration: underline

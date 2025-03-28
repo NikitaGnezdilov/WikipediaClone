@@ -1,0 +1,52 @@
+@use '../../base/vars'
+.vertical-header
+  font-size: 0.70em
+  font-weight: normal
+  width: 200px
+  left: 0
+  z-index: 1000
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+  &__menu
+    height: auto
+    width: 100%
+
+    &--left-margin
+      margin-left: 10px
+
+    li
+      padding: 4px 0
+      list-style-type: none
+
+    nav
+      margin: 20px 18px
+
+  .vertical-header__logo
+    display: flex  
+    width: 100%
+    margin: 0px 18px
+    a 
+      img
+        height: auto
+        width: 135px
+
+  a
+    
+    color: vars.$blue-color-link
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  h3 
+    margin: 5px 0px
+    font-weight: 230
+    cursor: default
+    color: #54595d
+    text-align: left
+    background-image: linear-gradient(to right, rgba(200, 204, 209, 0) 0%, #c8ccd1 33%, #c8ccd1 66%, rgba(200, 204, 209, 0) 100%)
+    background-position: center bottom
+    background-repeat: no-repeat
+    background-size: 100% 1px
