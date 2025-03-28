@@ -7,6 +7,7 @@ dist/
 
 # ⚠️ Личные/системные файлы
 .env
+.env.local
 .DS_Store
 Thumbs.db
 
@@ -19,13 +20,30 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# 💥 Патчи и бэкапы (если не хочешь заливать)
+# 💥 Патчи и бэкапы
 patches/backups/
 *.zip
 
-# 🔐 Бэкапы макоси и редакторов
-*.swp
-*.bak
-*.tmp
+# 🧪 Coverage / cache
+coverage/
+.nyc_output
+.cache
+.parcel-cache
+.rpt2_cache/
+.rts2_cache_*/
 
-# 📸 Скрины или демо
+# TypeScript / tools
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# Yarn 2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Others
+.node_repl_history
+*.tgz
