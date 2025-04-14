@@ -1,0 +1,138 @@
+{
+  "_comment": "ContentMenu.js",
+  "menu": {
+    "main": "Main page",
+    "discussion": "Discussion"
+  },
+  "toolbar": {
+    "read": "Read",
+    "code": "View source",
+    "history": "History",
+    "search": "Search Wikipedia"
+  },
+  "discussion": {
+    "title": "Talk: Main page",
+    "subtitle": "Content from Wikipedia — the free encyclopedia",
+    "notice_first": "This page is not a ",
+    "notice_second": "forum",
+    "notice_third": " for general discussion of Wikipedia.",
+    "about": "This page is only for discussing the main page and its included templates.",
+    "seeAlso": "See also individual discussions:",
+    "seeAlso1": "Did you know + preparation of the next edition",
+    "seeAlso2": "Current events",
+    "stats1": "Pageview statistics for ",
+    "stats2": "“Main Page”",
+    "deleted": "This article was nominated for deletion and was kept.",
+    "explanation1": "You can find explanation and discussion at ",
+    "explanation2": "Wikipedia:Articles for deletion/March 10, 2007",
+    "explanation3": "Repeat nomination is ",
+    "explanation4": "only allowed ",
+    "explanation5": "if there are new arguments not considered before, changed circumstances around the article subject, or a change in Wikipedia rules. Otherwise, the request will be quickly closed.",
+    "multipleDeletions_text": "This page was nominated for deletion on April 1",
+    "multipleDeletions1": "2008",
+    "multipleDeletions2": "2009",
+    "multipleDeletions3": "2012",
+    "multipleDeletions4": "2013",
+    "multipleDeletions5": "2014",
+    "multipleDeletions6": "2022",
+    "multipleDeletions7": "2023",
+    "multipleDeletions8": "2024",
+    "renaming1-1": "This article was ",
+    "renaming1-2": "nominated for renaming",
+    "renaming1-3": " on April 1, 2012.",
+    "result1-1": "As a result of the discussion, the name",
+    "result1-2": "Main Page",
+    "result1-3": " was kept unchanged.",
+    "rules1-1": "Repeat renaming nomination requires strong justification, otherwise it may be considered ",
+    "rules1-2": "gaming the system",
+    "renaming2-1": "This article was ",
+    "renaming2-2": "nominated for renaming",
+    "renaming2-3": "to",
+    "renaming2-4": "Home_Page",
+    "renaming2-5": "on September 20, 2012.",
+    "result2-1": "As a result of the discussion, the name",
+    "result2-2": "Main_Page",
+    "result2-3": " was kept unchanged.",
+    "rules2-1": "Repeat nomination requires",
+    "rules2-2": "strong justification",
+    "rules2-3": "otherwise it may be considered ",
+    "rules2-4": "gaming the system",
+    "renaming3-1": "This article was ",
+    "renaming3-2": "nominated for renaming",
+    "renaming3-3": "on February 7, 2019.",
+    "result3-1": "As a result of the discussion, the name",
+    "result3-2": "Main Page",
+    "result3-3": "was kept unchanged.",
+    "rules3-1": "Repeat nomination requires",
+    "rules3-2": "strong justification",
+    "rules3-3": "otherwise it may be considered ",
+    "rules3-4": "gaming the system"
+  },
+
+  "_comment2": "SidebarMenu.js",
+    "sidebar": {
+    "main": {
+    "mainPage": "Main page",
+    "contents": "Contents",
+    "featured": "Featured content",
+    "random": "Random article",
+    "currentEvents": "Current events",
+    "donate": "Donate"
+  },
+
+  "participation": {
+    "title": "Participation",
+    "reportError": "Report an error",
+    "editGuide": "How to edit pages",
+    "community": "Community portal",
+    "forum": "Village pump",
+    "recentChanges": "Recent changes",
+    "newPages": "New pages",
+    "help": "Help"
+  },
+
+  "tools": {
+    "title": "Tools",
+    "whatLinksHere": "What links here",
+    "relatedChanges": "Related changes",
+    "specialPages": "Special pages",
+    "permanentLink": "Permanent link",
+    "pageInfo": "Page information",
+    "shortURL": "Get a short URL",
+    "qrCode": "Download QR code",
+    "expandAll": "Expand all"
+  },
+
+  "printExport": {
+    "title": "Print/export",
+    "downloadPDF": "Download as PDF",
+    "printVersion": "Printable version"
+  },
+
+  "sisterProjects": {
+    "title": "In other projects",
+    "commons": "Wikimedia Commons",
+    "wikimedia": "Wikimedia Foundation",
+    "mediawiki": "MediaWiki",
+    "meta": "Meta-Wiki",
+    "outreach": "Wikimedia Outreach",
+    "multilingual": "Wikispecies multilingual",
+    "species": "Wikispecies",
+    "wikibooks": "Wikibooks",
+    "wikidata": "Wikidata",
+    "wikifunctions": "Wikifunctions",
+    "wikimania": "Wikimania",
+    "wikinews": "Wikinews",
+    "wikiquote": "Wikiquote",
+    "wikisource": "Wikisource",
+    "wikiversity": "Wikiversity",
+    "wikivoyage": "Wikivoyage",
+    "wiktionary": "Wiktionary",
+    "wikidataItem": "Wikidata item"
+  },
+
+  "languages": {
+    "title": "In other languages"
+  }
+  }
+}
