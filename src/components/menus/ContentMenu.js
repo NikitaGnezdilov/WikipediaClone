@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import FeaturedArticle from '../articles/FeaturedArticle'
 import ArticleGreeting from '../articles/ArticleGreeting'
 import RecentArticles from '../articles/RecentArticles'
+import { useTranslation } from 'react-i18next'
 
 function ContentMenu() {
 	const [activeTab, setActiveTab] = useState('Заглавная')
@@ -9,6 +10,7 @@ function ContentMenu() {
 	const handleTabClick = tabName => {
 		setActiveTab(tabName)
 	}
+	const { t } = useTranslation()
 
 	return (
 		<div className='vector-menu-content'>
@@ -24,7 +26,7 @@ function ContentMenu() {
 								}`}
 								onClick={() => handleTabClick('Заглавная')}
 							>
-								Заглавная
+								{t('menu.main')}
 							</a>
 						</li>
 						<li className='vector-menu-content-list__item'>
@@ -35,7 +37,7 @@ function ContentMenu() {
 								}`}
 								onClick={() => handleTabClick('Обсуждение')}
 							>
-								Обсуждение
+								{t('menu.discussion')}
 							</a>
 						</li>
 					</ul>
@@ -43,9 +45,11 @@ function ContentMenu() {
 
 				<div className='vector-menu-toolbar'>
 					<div className='vector-menu-toolbar__buttons'>
-						<button className='vector-menu-button'>Читать</button>
-						<button className='vector-menu-button'>Просмотр кода</button>
-						<button className='vector-menu-button'>История</button>
+						<button className='vector-menu-button'>{t('toolbar.read')}</button>
+						<button className='vector-menu-button'>{t('toolbar.code')}</button>
+						<button className='vector-menu-button'>
+							{t('toolbar.history')}
+						</button>
 					</div>
 					<div className='vector-menu-toolbar__search'>
 						<div className='vector-search-wrapper'>
@@ -83,111 +87,114 @@ function ContentMenu() {
 				)}
 				{activeTab === 'Обсуждение' && (
 					<div className='tab-content__section discussion'>
-						<h1>Обсуждение:Заглавная страница</h1>
-						<p className='article-subtitle'>
-							Материал из Википедии — свободной энциклопедии
-						</p>
+						<h1>{t('discussion.title')}</h1>
+						<p className='article-subtitle'>{t('discussion.subtitle')}</p>
 						<div className='discussion-box top-warning'>
 							<h4>
 								<strong>
-									Эта страница — не <a href='#'>форум</a> для обсуждения
-									Википедии в целом.
+									{t('discussion.notice_first')}{' '}
+									<a href='#'>{t('discussion.notice_second')}</a>
+									{t('discussion.notice_third')}
 								</strong>
 							</h4>
-							<p>
-								Здесь обсуждается только сама заглавная страница и включённые в
-								неё шаблоны.
-							</p>
-							<p>См. также частные обсуждения:</p>
+							<p>{t('discussion.about')}</p>
+							<p>{t('discussion.seeAlso')}</p>
 							<ul>
 								<li>
-									<a href='#'>Знаете ли вы + подготовка следующего выпуска</a>
+									<a href='#'>{t('discussion.seeAlso1')}</a>
 								</li>
 								<li>
-									<a href='#'>Текущие события</a>
+									<a href='#'>{t('discussion.seeAlso2')}</a>
 								</li>
 							</ul>
 						</div>
 						<div className='discussion-box statistics'>
-							<a href='#'>Статистика просмотров страницы</a> «Заглавная
-							страница»
+							<a href='#'>{t('discussion.stats1')}</a> {t('discussion.stats2')}
 						</div>
 						<div className='discussion-box'>
-							<strong>
-								Эта статья выставлялась на удаление и была оставлена.
-							</strong>
+							<strong>{t('discussion.deleted')}</strong>
 							<p>
-								Пояснение причин и соответствующее обсуждение вы можете найти на
-								странице <a href='#'>Википедия:К удалению/10 марта 2007</a>.
-								Повторное выставление <a href='#'>допустимо лишь</a> при наличии
-								аргументов, не рассмотренных в прошлых номинациях, при изменении
-								обстоятельств вокруг предмета статьи или изменении правил
-								Википедии, в противном случае повторная заявка будет быстро
-								закрыта.
+								{t('discussion.explanation1')}
+								<a href='#'>{t('discussion.explanation2')}</a>.{' '}
+								{t('discussion.explanation3')}
+								<a href='#'>{t('discussion.explanation4')}</a>
+								{''}
+								{t('discussion.explanation5')}
 							</p>
 						</div>
 						<div className='discussion-box'>
 							<strong>
-								Эта страница выставлялась на удаление 1 апреля{' '}
-								<a href='#'>2008 года</a>,{' '}
+								{t('discussion.multipleDeletions_text')}{' '}
+								<a href='#'>{t('discussion.multipleDeletions1')}</a>,{' '}
 								<a href='#' className='red-link'>
-									2009 года
+									{t('discussion.multipleDeletions2')}
 								</a>
 								,{' '}
 								<a href='#' className='red-link'>
-									2012 года
+									{t('discussion.multipleDeletions3')}
 								</a>
 								,{' '}
 								<a href='#' className='red-link'>
-									2013 года
+									{t('discussion.multipleDeletions4')}
 								</a>
-								, <a href='#'>2014 года</a>, <a href='#'>2022 года</a>,{' '}
-								<a href='#'>2023 года</a>, <a href='#'>2024 года</a>.
+								, <a href='#'>{t('discussion.multipleDeletions5')}</a>,{' '}
+								<a href='#'>{t('discussion.multipleDeletions6')}</a>,{' '}
+								<a href='#'>{t('discussion.multipleDeletions7')}</a>,{' '}
+								<a href='#'>{t('discussion.multipleDeletions8')}</a>.
 							</strong>
 						</div>
 						<div className='discussion-box'>
 							<p>
-								Эта статья была <a href='#'>предложена к переименованию</a> 1
-								апреля 2012 года.
+								{t('discussion.renaming1-1')}
+								<a href='#'>{t('discussion.renaming1-2')}</a>
+								{t('discussion.renaming1-3')}
 							</p>
 							<p>
-								В результате обсуждения было решено оставить название{' '}
-								<strong>Заглавная страница</strong> без изменений.
+								{t('discussion.result1-1')}{' '}
+								<strong>{t('discussion.result1-2')}</strong>
+								{t('discussion.result1-3')}
 							</p>
 							<p>
-								Для повторного выставления статьи на переименование нужны веские
-								основания, иначе это может быть расценено как{' '}
-								<a href='#'>игра с правилами</a>.
-							</p>
-						</div>
-						<div className='discussion-box'>
-							<p>
-								Эта статья была <a href='#'>предложена к переименованию</a> в
-								<strong>Главная_страница</strong> 20 сентября 2012 года.
-							</p>
-							<p>
-								В результате обсуждения было решено оставить название
-								<strong>Заглавная_страница</strong> без изменений.
-							</p>
-							<p>
-								Для повторного выставления статьи на переименование нужны{' '}
-								<a href='#'>веские основания</a>, иначе это может быть расценено
-								как <a href='#'>игра с правилами</a>.
+								{t('discussion.rules1-1')}
+								<a href='#'>{t('discussion.rules1-2')}</a>.
 							</p>
 						</div>
 						<div className='discussion-box'>
 							<p>
-								Эта статья была <a href='#'>предложена к переименованию</a> 7
-								февраля 2019 года.
+								{t('discussion.renaming2-1')}
+								<a href='#'>{t('discussion.renaming2-2')}</a>{' '}
+								{t('discussion.renaming2-3')}
+								<strong> {t('discussion.renaming2-4')}</strong>{' '}
+								{t('discussion.renaming2-5')}
 							</p>
 							<p>
-								В результате обсуждения было решено оставить название{' '}
-								<strong>Заглавная страница</strong> без изменений.
+								{t('discussion.result2-1')}
+								<strong> {t('discussion.result2-2')}</strong>{' '}
+								{t('discussion.result2-3')}
 							</p>
 							<p>
-								Для повторного выставления статьи на переименование нужны{' '}
-								<a href='#'>веские основания</a>, иначе это может быть расценено
-								как <a href='#'>игра с правилами</a>.
+								{t('discussion.rules2-1')}
+								<a href='#'> {t('discussion.rules2-2')}</a>,{' '}
+								{t('discussion.rules2-3')}
+								<a href='#'> {t('discussion.rules2-4')}</a>.
+							</p>
+						</div>
+						<div className='discussion-box'>
+							<p>
+								{t('discussion.renaming3-1')}{' '}
+								<a href='#'>{t('discussion.renaming3-2')}</a>{' '}
+								{t('discussion.renaming3-3')}
+							</p>
+							<p>
+								{t('discussion.result3-1')}
+								<strong>{' '}{t('discussion.result3-2')}</strong>{' '}
+								{t('discussion.result3-3')}
+							</p>
+							<p>
+								{t('discussion.rules3-1')}
+								<a href='#'>{' '}{t('discussion.rules3-2')}</a>,{' '}
+								{t('discussion.rules3-3')}
+								<a href='#'>{' '}{t('discussion.rules3-4')}</a>.
 							</p>
 						</div>
 					</div>

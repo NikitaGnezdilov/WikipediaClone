@@ -1,7 +1,14 @@
 import React from 'react'
 import logo from '../../images/logo.jpg'
+import { useTranslation } from 'react-i18next'
 
 function SidebarMenu() {
+	const { t, i18n } = useTranslation()
+
+	const handleLanguageChange = lang => {
+		i18n.changeLanguage(lang)
+		localStorage.setItem('lang', lang)
+	}
 	return (
 		<header className='vertical-header'>
 			<div className='vertical-header__logo'>
@@ -13,153 +20,163 @@ function SidebarMenu() {
 				<nav className='vertical-header__main-links'>
 					<ul>
 						<li>
-							<a href='#'>Заглавная страница</a>
+							<a href='#'>{t('sidebar.main.mainPage')}</a>
 						</li>
 						<li>
-							<a href='#'>Содержание</a>
+							<a href='#'>{t('sidebar.main.contents')}</a>
 						</li>
 						<li>
-							<a href='#'>Избранные статьи</a>
+							<a href='#'>{t('sidebar.main.featured')}</a>
 						</li>
 						<li>
-							<a href='#'>Случайная статья</a>
+							<a href='#'>{t('sidebar.main.random')}</a>
 						</li>
 						<li>
-							<a href='#'>Текущие события</a>
+							<a href='#'>{t('sidebar.main.currentEvents')}</a>
 						</li>
 						<li>
-							<a href='#'>Пожертвовать</a>
+							<a href='#'>{t('sidebar.main.donate')}</a>
 						</li>
 					</ul>
 				</nav>
 				<nav className='vertical-header__participation-links'>
-					<h3>Участие</h3>
+					<h3>{t('sidebar.participation.title')}</h3>
 					<ul>
 						<li>
-							<a href='#'>Сообщить об ошибке</a>
+							<a href='#'>{t('sidebar.participation.reportError')}</a>
 						</li>
 						<li>
-							<a href='#'>Как править статьи</a>
+							<a href='#'>{t('sidebar.participation.editGuide')}</a>
 						</li>
 						<li>
-							<a href='#'>Сообщество</a>
+							<a href='#'>{t('sidebar.participation.community')}</a>
 						</li>
 						<li>
-							<a href='#'>Форум</a>
+							<a href='#'>{t('sidebar.participation.forum')}</a>
 						</li>
 						<li>
-							<a href='#'>Свежие правки</a>
+							<a href='#'>{t('sidebar.participation.recentChanges')}</a>
 						</li>
 						<li>
-							<a href='#'>Новые страницы</a>
+							<a href='#'>{t('sidebar.participation.newPages')}</a>
 						</li>
 						<li>
-							<a href='#'>Справка</a>
+							<a href='#'>{t('sidebar.participation.help')}</a>
 						</li>
 					</ul>
 				</nav>
 				<nav className='vertical-header__tool-links'>
-					<h3>Инструменты</h3>
+					<h3>{t('sidebar.tools.title')}</h3>
 					<ul>
 						<li>
-							<a href='#'>Ссылки сюда</a>
+							<a href='#'>{t('sidebar.tools.whatLinksHere')}</a>
 						</li>
 						<li>
-							<a href='#'>Связанные правки</a>
+							<a href='#'>{t('sidebar.tools.relatedChanges')}</a>
 						</li>
 						<li>
-							<a href='#'>Служебные страницы</a>
+							<a href='#'>{t('sidebar.tools.specialPages')}</a>
 						</li>
 						<li>
-							<a href='#'>Постоянная ссылка</a>
+							<a href='#'>{t('sidebar.tools.permanentLink')}</a>
 						</li>
 						<li>
-							<a href='#'>Сведения о странице</a>
+							<a href='#'>{t('sidebar.tools.pageInfo')}</a>
 						</li>
 						<li>
-							<a href='#'>Получить короткий URL</a>
+							<a href='#'>{t('sidebar.tools.shortURL')}</a>
 						</li>
 						<li>
-							<a href='#'>Скачать QR-код</a>
+							<a href='#'>{t('sidebar.tools.qrCode')}</a>
 						</li>
 						<li>
-							<a href='#'>Развернуть всё</a>
+							<a href='#'>{t('sidebar.tools.expandAll')}</a>
 						</li>
 					</ul>
 				</nav>
 				<nav className='vertical-header__export-print-links'>
-					<h3>Печать/экспорт</h3>
+					<h3>{t('sidebar.printExport.title')}</h3>
 					<ul>
 						<li>
-							<a href='#'>Скачать как PDF</a>
+							<a href='#'>{t('sidebar.printExport.downloadPDF')}</a>
 						</li>
 						<li>
-							<a href='#'>Версия для печати</a>
+							<a href='#'>{t('sidebar.printExport.printVersion')}</a>
 						</li>
 					</ul>
 				</nav>
 				<nav className='vertical-header__other-projects-links'>
-					<h3>В других проектах</h3>
+					<h3>{t('sidebar.sisterProjects.title')}</h3>
 					<ul>
 						<li>
-							<a href='#'>Викисклад</a>
+							<a href='#'>{t('sidebar.sisterProjects.commons')}</a>
 						</li>
 						<li>
-							<a href='#'>Фонд Викимедиа</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikimedia')}</a>
 						</li>
 						<li>
-							<a href='#'>Медиавики</a>
+							<a href='#'>{t('sidebar.sisterProjects.mediawiki')}</a>
 						</li>
 						<li>
-							<a href='#'>Мета-вики</a>
+							<a href='#'>{t('sidebar.sisterProjects.meta')}</a>
 						</li>
 						<li>
-							<a href='#'>Популяризация Викимедиа</a>
+							<a href='#'>{t('sidebar.sisterProjects.outreach')}</a>
 						</li>
 						<li>
-							<a href='#'>Многоязычная Викитека</a>
+							<a href='#'>{t('sidebar.sisterProjects.multilingual')}</a>
 						</li>
 						<li>
-							<a href='#'>Викивиды</a>
+							<a href='#'>{t('sidebar.sisterProjects.species')}</a>
 						</li>
 						<li>
-							<a href='#'>Викиучебник</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikibooks')}</a>
 						</li>
 						<li>
-							<a href='#'>Викиданные</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikidata')}</a>
 						</li>
 						<li>
-							<a href='#'>Викифункции</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikifunctions')}</a>
 						</li>
 						<li>
-							<a href='#'>Викимания</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikimania')}</a>
 						</li>
 						<li>
-							<a href='#'>Викиновости</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikinews')}</a>
 						</li>
 						<li>
-							<a href='#'>Викицитатник</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikiquote')}</a>
 						</li>
 						<li>
-							<a href='#'>Викитека</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikisource')}</a>
 						</li>
 						<li>
-							<a href='#'>Викиверситет</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikiversity')}</a>
 						</li>
 						<li>
-							<a href='#'>Викигид</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikivoyage')}</a>
 						</li>
 						<li>
-							<a href='#'>Викисловарь</a>
+							<a href='#'>{t('sidebar.sisterProjects.wiktionary')}</a>
 						</li>
 						<li>
-							<a href='#'>Элемент Викиданных</a>
+							<a href='#'>{t('sidebar.sisterProjects.wikidataItem')}</a>
 						</li>
 					</ul>
 				</nav>
 				<nav className='vertical-header__languages-links'>
-					<h3>На других языках</h3>
+					<h3>{t('sidebar.languages.title')}</h3>
 					<ul>
+						<li>
+							<button onClick={() => handleLanguageChange('ru')}>
+								Русский
+							</button>
+						</li>
+						<li>
+							<button onClick={() => handleLanguageChange('en')}>
+								English
+							</button>
+						</li>
 						<li>
 							<a href='#'>العربية</a>
 						</li>
@@ -177,7 +194,7 @@ function SidebarMenu() {
 						</li>
 						<li>
 							<a href='#'>Български</a>
-						</li>й
+						</li>
 						<li>
 							<a href='#'>Нохчийн</a>
 						</li>
@@ -195,9 +212,6 @@ function SidebarMenu() {
 						</li>
 						<li>
 							<a href='#'>Ελληνικά</a>
-						</li>
-						<li>
-							<a href='#'>English</a>
 						</li>
 						<li>
 							<a href='#'>Español</a>
