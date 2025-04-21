@@ -67,6 +67,7 @@
     "rules3-3": "иначе это может быть расценено как",
     "rules3-4": "игра с правилами"
   },
+  "_comment2": "SidebarMenu.js",
   "sidebar": {
     "main": {
       "mainPage": "Заглавная страница",
@@ -130,5 +131,34 @@
     "languages": {
       "title": "На других языках"
     }
-  }    
-}
+  },
+  "_comment3": "article-greeting",
+  "article-greeting": {
+    "greeting-text1": "Добро пожаловать в",
+    "greeting-text2": "Википедию",
+    "greeting-text3": "свободную энциклопедию",
+    "greeting-text4": "которую",
+    "greeting-text5": "может редактировать каждый",
+    "wiki-stats": {
+      "text": {
+        "text1": "Сейчас в Википедии",
+        "text2": "2 035 926 статей",
+        "text3": "на",
+        "text4": "русском языке"  
+      },
+      "links": {
+        "link1": "Порталы",
+        "link2": "Справка",
+        "link3": "Создать статью"
+      }
+    }
+  },
+  "_comment3": "top-menu",
+  "top-menu": {
+    "logged_info": "Вы не представились системе",
+    "menu__item1": "Обсуждение",
+    "menu__item2": "Вклад",
+    "menu__item3": "Создать учетную запись",
+    "menu__item4": "Войти"
+  }
+} 

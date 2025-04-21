@@ -4,6 +4,8 @@ import ArticleGreeting from '../articles/ArticleGreeting'
 import RecentArticles from '../articles/RecentArticles'
 import { useTranslation } from 'react-i18next'
 
+
+
 function ContentMenu() {
 	const [activeTab, setActiveTab] = useState('Заглавная')
 

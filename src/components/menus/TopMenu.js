@@ -1,27 +1,29 @@
-import React from "react";
+import React from 'react'
 import { HiUser } from 'react-icons/hi'
+import { useTranslation } from 'react-i18next'
 
 function TopMenu() {
-  return (
+	const { t } = useTranslation()
+	return (
 		<div className='horizontal-menu horizontal-menu--position'>
 			<div className='horizontal-menu__state-profile'></div>
 			<nav className='horizontal-menu__nav-panel'>
 				<ul>
 					<li className='horizontal-menu__item horizontal-menu__item--user-not-logged'>
 						<HiUser className='horizontal-menu__item--logo-person' />
-						<a href='#'>Вы не представились системе</a>
+						<a href='#'>{t('top-menu.logged_info')}</a>
 					</li>
 					<li className='horizontal-menu__item'>
-						<a href='#'>Обсуждение</a>
+						<a href='#'>{t('top-menu.menu__item1')}</a>
 					</li>
 					<li className='horizontal-menu__item'>
-						<a href='#'>Вклад</a>
+						<a href='#'>{t('top-menu.menu__item2')}</a>
 					</li>
 					<li className='horizontal-menu__item'>
-						<a href='#'>Создать учетную запись</a>
+						<a href='#'>{t('top-menu.menu__item3')}</a>
 					</li>
 					<li className='horizontal-menu__item'>
-						<a href='#'>Войти</a>
+						<a href='#'>{t('top-menu.menu__item4')}</a>
 					</li>
 				</ul>
 			</nav>

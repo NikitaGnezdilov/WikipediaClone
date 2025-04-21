@@ -133,6 +133,35 @@
 
   "languages": {
     "title": "In other languages"
-  }
+    }
+  },
+  "_comment3": "article-greeting",
+  "article-greeting": {
+    "greeting-text1": "Welcome to",
+    "greeting-text2": "Wikipedia",
+    "greeting-text3": "the free encyclopedia",
+    "greeting-text4": "that",
+    "greeting-text5": "anyone can edit",
+    "wiki-stats": {
+      "text": {
+        "text1": "Currently in Wikipedia",
+        "text2": "2,035,926 articles",
+        "text3": "in",
+        "text4": "the Russian language"
+      },
+      "links": {
+        "link1": "Portals",
+        "link2": "Help",
+        "link3": "Create an article"
+      }
+    }
+  },
+  "_comment3": "top-menu",
+  "top-menu": {
+    "logged_info": "You haven't introduced yourself to the system",
+    "menu__item1": "Discussion",
+    "menu__item2": "Tab",
+    "menu__item3": "Create an account",
+    "menu__item4": "Log in"
   }
 }
