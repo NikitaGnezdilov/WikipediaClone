@@ -113,7 +113,7 @@ function FeaturedArticle() {
 					href='https://ru.wikipedia.org/wiki/Википедия:Избранные_статьи'
 					className='btn btn-all'
 				>
-					Все избранные статьи
+					Все 2017 избранные статьи
 				</a>
 				<button className='btn btn-more'>...</button>
 			</div>

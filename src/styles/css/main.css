@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body, html {
@@ -30,14 +29,21 @@ a:visited:hover {
 
 .featured-article {
   line-height: 1.6;
+  font: inherit;
+  line-height: 1.5;
+  font-size: 0.875em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 15px;
+  padding: 40px;
   border-radius: 2px;
   border: 2.2px solid #ddd;
   background-color: #f9f9f9;
-  font-family: "Linux Libertine", "Georgia", "Times", "Source Serif Pro", serif;
+  line-height: 1.5;
+}
+.featured-article__subtitle {
+  color: #54595d;
+  font-weight: 400;
 }
 .featured-article img {
   float: right;
@@ -45,8 +51,21 @@ a:visited:hover {
   width: 175px;
   height: auto;
 }
-.featured-article .article-title-teodor {
-  margin-top: 0;
+.featured-article__title {
+  font-family: "Linux Libertine", "Georgia", "Times", "Source Serif Pro", serif;
+  font-weight: 500;
+  margin: 0 3px 5px 0px;
+}
+.featured-article__title a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.featured-article__title:hover a {
+  color: #0645ad;
+}
+.featured-article__title a:hover {
+  text-decoration: underline;
 }
 .featured-article .article-title {
   font-size: 1.2em;
@@ -62,31 +81,42 @@ a:visited:hover {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
 }
-.featured-article .btn {
+.featured-article .featured-article__buttons .btn {
   padding: 5px 10px;
-  border: 1px solid #3366cc;
+  border: 1px solid gray;
   border-radius: 2px;
   background-color: #f8f9fa;
-  color: #3366cc;
+  color: #0645ad;
   text-decoration: none;
-  font-size: 0.85em;
+  font-size: 0.9em;
   cursor: pointer;
+  margin-bottom: 8px;
 }
-.featured-article .btn:hover {
+.featured-article .featured-article__buttons .btn:hover {
   background-color: #e9ecef;
 }
-.featured-article .btn-read {
-  font-weight: bold;
+.featured-article .featured-article__buttons .btn-read:hover {
+  border: 1px solid #3366cc;
 }
-.featured-article .btn-all {
-  font-weight: normal;
+.featured-article .featured-article__buttons .btn-all {
+  border: none;
 }
-.featured-article .btn-more {
+.featured-article .featured-article__buttons .btn-more {
   background: none;
   border: none;
-  font-size: 1.2em;
+  font-size: 1.5em;
   cursor: pointer;
+  margin-left: auto;
+  color: black;
+  font-weight: 600;
+}
+.featured-article .featured-article__buttons .btn-more:hover {
+  color: gray;
 }
 
 .from-new-materials {
